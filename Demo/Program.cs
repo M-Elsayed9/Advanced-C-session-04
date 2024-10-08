@@ -56,6 +56,31 @@
             //    Console.WriteLine(entry.Key + " : " + entry.Value);
             //}
             #endregion
+
+            #region Generic Collections HashSet
+
+            HashSet<int> numbers = new HashSet<int>();
+            // HashSet is a generic collection that stores unique elements.
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            // returns true
+
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            numbers.Add(1); // duplicate element is not allowed
+            // no exception is thrown
+            // returns false
+
+            // Sorted Dictionary
+            // Sorted List
+            // Sorted Set
+
+            #endregion
         }
     }
 }
