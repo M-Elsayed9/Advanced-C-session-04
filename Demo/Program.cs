@@ -4,7 +4,58 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Generic Collection Hashtable [Dictionary]
+            // Dictionary is a generic collection that stores key-value pairs.
+            // It is a collection of keys and values.
+
+            //Dictionary<string, int> PhoneBook = new Dictionary<string, int>();
+
+            //PhoneBook.Add("John", 1234567890);
+            //PhoneBook.Add("Jane", 1876543210);
+            //PhoneBook.Add("Doe", 67891230);
+
+            //PhoneBook.Add("John", 1234567890); // Duplicate key is not allowed
+            //// exception: An item with the same key has already been added.
+            ////unsafe 
+            //// keys must be unique
+
+            //PhoneBook["John"] = 5555; // Update value indexer as setter
+            //Console.WriteLine(PhoneBook["John"]); // 5555 // indexer as getter
+
+            //PhoneBook["Jojo"] = 5555; // addm new key-value pair using indexer
+            //// preferred method to add/update key-value pair
+
+            //if(!PhoneBook.ContainsKey("Jianna")) // check if key exists
+            //{
+            //    PhoneBook.Add("Jianna", 1234567890);
+            //}
+            //else
+            //{
+            //    PhoneBook["Jianna"] = 1234567890; // update value
+            //}
+
+            //if(!PhoneBook.TryAdd("Jianna", 1234567890))
+            //    PhoneBook["Jianna"] = 1234567890; // update value
+
+
+            //bool result = PhoneBook.TryAdd("Jianna", 1234567890); // TryAdd method
+            //// returns false if key already exists
+
+            //Console.WriteLine(PhoneBook["Yasmine"]); // exception: KeyNotFoundException
+            //// unsafe code
+
+            //Console.WriteLine(PhoneBook.TryGetValue("Yasmine", out int value)); // false
+
+            //Console.WriteLine(value); // 0
+
+
+
+            //foreach (KeyValuePair<string, int> entry in PhoneBook)
+            //{
+            //    //Console.WriteLine(entry);
+            //    Console.WriteLine(entry.Key + " : " + entry.Value);
+            //}
+            #endregion
         }
     }
 }
