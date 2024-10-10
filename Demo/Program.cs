@@ -59,20 +59,20 @@
 
             #region Generic Collections HashSet
 
-            HashSet<int> numbers = new HashSet<int>();
-            // HashSet is a generic collection that stores unique elements.
+            //HashSet<int> numbers = new HashSet<int>();
+            //// HashSet is a generic collection that stores unique elements.
 
-            numbers.Add(1);
-            numbers.Add(2);
-            numbers.Add(3);
-            // returns true
+            //numbers.Add(1);
+            //numbers.Add(2);
+            //numbers.Add(3);
+            //// returns true
 
-            foreach (int number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            //foreach (int number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
 
-            numbers.Add(1); // duplicate element is not allowed
+            //numbers.Add(1); // duplicate element is not allowed
             // no exception is thrown
             // returns false
 
@@ -80,6 +80,45 @@
             // Sorted List
             // Sorted Set
 
+            #endregion
+
+            #region Implicitly Typed Local Variable [var, dynaminc]
+
+            #region Var
+            // var Name = "John"; // implicit type
+            // Compiler will detect the type of the variable at compile time
+            //based on the value assigned to it.
+
+            //var X; // error: cannot infer type (Var must be initialzied)
+            //Name = null; // invalid Var cannot be initialized with null
+            //Name = 123; // error: cannot convert int to string
+
+            // Name = "Mai"; // valid as Name is of type string 
+            #endregion
+
+            #region dynamic
+
+            // dynamic Data = "Ali";
+            // dynamic type
+            // CLR determines the type of the variable at runtime
+            // based on the last value assigned to it.
+
+            // Data = 123; // valid
+
+            // can declare variable with dynamic without initializing it
+            // dynamic X;
+
+            // dynamic U = null; // valid
+            // dynamic can be initialized with null
+            // dynamic can be assigned any value of any type
+
+            // dynamic is not type safe
+            // dynamic is not recommended to use
+
+
+            #endregion
+
+            
             #endregion
         }
     }
