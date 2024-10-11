@@ -124,15 +124,76 @@ namespace Demo
             
             #region Extension Method
 
-            int X = 12345;
+            //int X = 12345;
 
-            int Y = IntExtension.Reverse(X);
+            //int Y = IntExtension.Reverse(X);
 
-            Console.WriteLine(Y);
+            //Console.WriteLine(Y);
 
 
 
             #endregion
+
+            #endregion
+
+            #region Anonymous Type
+            //Employee employee = new Employee
+            //{
+            //    Id = 10,
+            //    Name = "John",
+            //    Salary = 1000
+            //};
+
+            //object employee = new
+            //{
+            //    Id = 10,
+            //    Name = "John",
+            //    Salary = 1000
+            //};
+
+            //Console.WriteLine(employee.Name); // invalid
+
+            var Employee = new
+            {
+                Id = 10,
+                Name = "John",
+                Salary = 1000
+            };
+            // object thta will be created from anonymous type is an immutable object
+
+            //Employee.Salary = 90; // invalid
+
+            Console.WriteLine(Employee.GetType().Name); // AnonymousType03
+
+            var Empoyee2 = new
+            {
+                Id = Employee.Id,
+                Name = Employee.Name,
+                Salary = 2000
+            };
+
+            var Employee3 = Empoyee2 with { Salary = 3000 }; // with expression
+
+            // // the same anonymous type can be created multiple times as long as
+            // // 1. the properties have the same name
+            // // 2. the properties have the same Order
+
+            var employee4 = new
+            {
+                Salary = 1000,
+                Id = 10,
+                Name = "John"
+            }; // new anonymous type
+
+            var employee5 = new
+            {
+               id = 10,
+                name = "John",
+                salary = 1000
+            }; // new anonymous type
+
+
+
 
             #endregion
         }
