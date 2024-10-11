@@ -1,7 +1,10 @@
-﻿namespace Demo
+﻿using System.Runtime.InteropServices;
+
+namespace Demo
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
             #region Generic Collection Hashtable [Dictionary]
@@ -119,6 +122,18 @@
             #endregion
 
             
+            #region Extension Method
+
+            int X = 12345;
+
+            int Y = IntExtension.Reverse(X);
+
+            Console.WriteLine(Y);
+
+
+
+            #endregion
+
             #endregion
         }
     }
