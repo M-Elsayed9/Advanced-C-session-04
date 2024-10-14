@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using Demo.Fifa;
+using System.Runtime.InteropServices;
 
 namespace Demo
 {
@@ -194,6 +195,30 @@ namespace Demo
 
 
 
+
+            #endregion
+
+              #region Event Handling
+
+            Ball ball = new Ball() { Id = 1 };
+
+            Player P01 = new Player() { Name = "John", Team = "A" };
+            Player P02 = new Player() { Name = "Jane", Team = "A" };
+            Player P03 = new Player() { Name = "messi", Team = "B" };
+            Player P04 = new Player() { Name = "Ronaldo", Team = "B" };
+
+            Refree Ref01 = new Refree() { Name = "Refree 1" };
+
+            ball.Location = new Location() { X = 10, Y = 20, Z = 30 };
+
+            ball.BallLocationChange += P01.Run;
+            ball.BallLocationChange += P02.Run;
+            ball.BallLocationChange += P03.Run;
+            ball.BallLocationChange += P04.Run;
+            ball.BallLocationChange += Ref01.Look;
+
+            ball.Location = new Location() { X = 11, Y = 22, Z = 33 };
+            
 
             #endregion
         }
